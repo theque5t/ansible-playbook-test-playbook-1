@@ -1,0 +1,12 @@
+---
+- name: test-playbook-1
+  hosts: "{{ target_inventory }}"
+  gather_facts: no
+  tasks:
+    - name: something
+      debug:
+        msg: something
+
+    - name: include test-role-1
+      include_role:
+        name: test-role-1
